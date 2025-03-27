@@ -1,0 +1,18 @@
+.button {
+	border: none;
+	background-color: rgba(34, 60, 80, 0.15);
+    transition: background-color 0.3s;
+	padding: 8px;
+	border-radius: 3px;
+	cursor: pointer;
+
+	@media (hover: hover) {
+		&:hover {
+			background-color: rgba(64, 100, 128, 0.15);
+		}
+	}
+
+	&:active {
+		background-color: rgba(18, 96, 156, 0.15);
+	}
+}

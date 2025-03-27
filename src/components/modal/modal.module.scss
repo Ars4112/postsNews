@@ -1,0 +1,46 @@
+.layout {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(1, 1, 1, 0.5);
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: (-50% -50%);
+	display: flex;
+	flex-direction: column;
+    gap: 15px;
+    width: clamp(min(300px, 50vw), 80vw, min(600px, 100vw));
+    height: clamp(min(400px, 50vh), 80vh, min(700px, 100vh));
+    background-color: #ffffff;
+    padding: 20px;
+
+    @media (max-width: 576px) {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.textArea {
+    height: 100%;
+}
+
+.buttonWrapper {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+}
+
+.isError {
+    color: red
+}
