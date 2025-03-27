@@ -29,8 +29,7 @@ export const Modal = (props: Props) => {
 
 	const closeModal = () => {
 		setModalOpen(false);
-		const body = document.body;
-		body.style = "overflow: none";
+		document.body.style.overflow = 'visible';
 	};
 
 	const closeModalLayout: MouseEventHandler<HTMLDivElement> = (e) => {

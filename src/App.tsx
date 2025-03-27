@@ -24,8 +24,7 @@ function App() {
 
 	const openModal = () => {
 		setModalOpen(true);
-    const body = document.body
-    body.style = 'overflow: hidden'
+    document.body.style.overflow = 'hidden';
 	};
 
 	const updatePost = (id: string) => {
