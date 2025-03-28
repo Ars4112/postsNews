@@ -38,12 +38,12 @@ export const Modal = (props: Props) => {
 	};
 
 	const changeText = (e: ChangeEvent<HTMLTextAreaElement>) => {
-		setNewText(e.currentTarget.value.trim());
+		setNewText(e.currentTarget.value);
 		setIsError(false);
 	};
 
 	const changeTitle = (e: ChangeEvent<HTMLInputElement>) => {
-		setNewTitle(e.currentTarget.value.trim());
+		setNewTitle(e.currentTarget.value);
 		setIsError(false);
 	};
 
@@ -57,8 +57,8 @@ export const Modal = (props: Props) => {
 		if (post) {
 			const newObj = {
 				id: post.id,
-				title: newTitle,
-				text: newText,
+				title: newTitle.trim(),
+				text: newText.trim(),
 			};
 
 			const index = [...newsList].findIndex((i) => i.id === post.id);
@@ -73,8 +73,8 @@ export const Modal = (props: Props) => {
 		}
 		const newObj = {
 			id: v4(),
-			title: newTitle,
-			text: newText,
+			title: newTitle.trim(),
+			text: newText.trim(),
 		};
 
 		newsList.push(newObj);
